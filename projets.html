@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projets — Margarita Demakova</title>
+  <meta name="description" content="Projets de Margarita Demakova — dont thenox.ch, une marque horlogère cosmique (design, WordPress, IA générative). D'autres projets à venir." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238B6CF0'/%3E%3Cstop offset='1' stop-color='%23E5739E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='13' fill='url(%23g)'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body data-page="projets">
+
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="Margarita Demakova — accueil">
+        <span class="brand__mark">M</span>
+        <span class="brand__name">Margarita Demakova<small>Media engineering</small></span>
+      </a>
+      <nav class="nav__menu" aria-label="Navigation principale">
+        <a class="nav__link" data-nav="home" href="index.html" data-i18n="nav.home">Accueil</a>
+        <a class="nav__link" data-nav="cv" href="cv.html" data-i18n="nav.cv">CV</a>
+        <a class="nav__link" data-nav="projets" href="projets.html" data-i18n="nav.projects">Projets</a>
+        <a class="nav__link" data-nav="jeu" href="jeu.html" data-i18n="nav.game">Jeu</a>
+        <a class="nav__link" data-nav="contact" href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav__right">
+        <div class="lang" role="group" aria-label="Langue / Language">
+          <button data-lang-btn="fr" aria-pressed="true">FR</button>
+          <button data-lang-btn="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mnav" aria-label="Menu mobile">
+    <a data-nav="home" href="index.html" data-i18n="nav.home">Accueil</a>
+    <a data-nav="cv" href="cv.html" data-i18n="nav.cv">CV</a>
+    <a data-nav="projets" href="projets.html" data-i18n="nav.projects">Projets</a>
+    <a data-nav="jeu" href="jeu.html" data-i18n="nav.game">Jeu</a>
+    <a data-nav="contact" href="contact.html" data-i18n="nav.contact">Contact</a>
+    <div class="m-meta">
+      <div class="lang" role="group" aria-label="Langue / Language" style="margin-bottom:16px">
+        <button data-lang-btn="fr">FR</button><button data-lang-btn="en">EN</button>
+      </div>
+      margarita.demakova@heig-vd.ch
+    </div>
+  </div>
+
+  <main>
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="kicker reveal" data-i18n="proj.kicker" style="margin-bottom:14px">Projets</p>
+        <h1 class="reveal reveal-d1" data-i18n="proj.title">travaux sélectionnés</h1>
+        <p class="lead reveal reveal-d2" data-i18n="proj.lead">Une sélection de projets où design, code et curiosité se rencontrent.</p>
+      </div>
+    </section>
+
+    <!-- ===== FEATURED : THENOX ===== -->
+    <section class="section" style="padding-top:clamp(36px,6vw,72px)">
+      <div class="wrap">
+        <article class="card project project--featured reveal">
+          <div class="project__media">
+            <span class="project__tag" data-i18n="thenox.tag">HEIG-VD · 2025</span>
+            <img src="/projets/thenox-1.png" alt="THENOX — page d'accueil du site horloger cosmique" />
+          </div>
+          <div class="project__body">
+            <h3>thenox.ch</h3>
+            <p data-i18n="thenox.desc">Marque horlogère cosmique : identité, site WordPress et contenus enrichis par l'IA générative.</p>
+            <div class="project__chips">
+              <span class="chip">Design</span><span class="chip">WordPress</span><span class="chip">HTML / CSS</span>
+              <span class="chip" data-i18n="skills.s8">IA générative</span><span class="chip">Marketing</span>
+            </div>
+            <div class="project__links">
+              <a class="btn btn-primary" href="https://thenox.ch" target="_blank" rel="noopener"><span data-i18n="thenox.live">Voir le site</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+              <a class="btn btn-ghost" href="projets/thenox-rapport.pdf" target="_blank" rel="noopener"><span data-i18n="thenox.report">Rapport (PDF)</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- gallery -->
+        <p class="kicker reveal" data-i18n="proj.gallery" style="margin:clamp(40px,6vw,64px) 0 18px">Aperçus</p>
+        <div class="gallery">
+          <a class="gallery__item reveal" href="projets/thenox-1.png" target="_blank" rel="noopener"><img src="/projets/thenox-1.png" alt="THENOX — page d'accueil" loading="lazy" /></a>
+          <a class="gallery__item reveal reveal-d1" href="projets/thenox-2.png" target="_blank" rel="noopener"><img src="/projets/thenox-2.png" alt="THENOX — expérience interactive" loading="lazy" /></a>
+          <a class="gallery__item reveal reveal-d2" href="projets/thenox-3.png" target="_blank" rel="noopener"><img src="/projets/thenox-3.png" alt="THENOX — collection Martia" loading="lazy" /></a>
+          <a class="gallery__item reveal" href="projets/thenox-5.png" target="_blank" rel="noopener"><img src="/projets/thenox-5.png" alt="THENOX — publication Instagram, Collection Martia" loading="lazy" /></a>
+          <a class="gallery__item reveal reveal-d1" href="projets/thenox-6.png" target="_blank" rel="noopener"><img src="/projets/thenox-6.png" alt="THENOX — profil Instagram" loading="lazy" /></a>
+          <a class="gallery__item reveal reveal-d2" href="projets/thenox-4.png" target="_blank" rel="noopener"><img src="/projets/thenox-4.png" alt="THENOX — profil Pinterest" loading="lazy" /></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MISERDON (playable) ===== -->
+    <section class="section" style="padding-top:0">
+      <div class="wrap">
+        <article class="card project project--featured reveal">
+          <div class="project__media" style="background:linear-gradient(135deg,#2a2140 0%,#6a46dc 55%,#e5739e 100%);display:grid;place-items:center;aspect-ratio:16/10">
+            <span class="project__tag" data-i18n="game.tag">EPFL · Java</span>
+            <span style="font-family:var(--font-display);font-weight:900;text-transform:lowercase;color:#fff;font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-0.03em">myserdon</span>
+          </div>
+          <div class="project__body">
+            <h3>myserdon</h3>
+            <p data-i18n="game.desc">Jeu d'aventure textuel (RPG) jouable en ligne — explore, parle, échange et échappe-toi de Myserdon.</p>
+            <div class="project__chips"><span class="chip">Java</span><span class="chip">RPG</span><span class="chip">JavaScript</span><span class="chip">Web</span></div>
+            <div class="project__links">
+              <a class="btn btn-primary" href="jeu.html"><span data-i18n="game.play">Jouer maintenant</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== UPCOMING ===== -->
+    <section class="section" style="background:var(--surface-soft);padding-top:clamp(56px,8vw,100px)">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="proj.others">À venir</p>
+          <h2 data-i18n="proj.others" style="font-size:clamp(2rem,5vw,3.4rem);text-transform:lowercase;margin-top:14px">À venir</h2>
+        </div>
+        <div class="projects-grid">
+          <article class="card project project--soon reveal">
+            <div class="project__media"><span class="soon-badge" data-i18n="soon.badge">Bientôt</span></div>
+            <div class="project__body">
+              <h3 data-i18n="soon.epflTitle">epfl — crypto & rpg</h3>
+              <p data-i18n="soon.epflDesc">Cryptographie, stéganographie et mini-jeu RPG en Java.</p>
+              <div class="project__chips"><span class="chip">Java</span><span class="chip">Cryptographie</span><span class="chip">Stéganographie</span></div>
+            </div>
+          </article>
+          <article class="card project project--soon reveal reveal-d1">
+            <div class="project__media"><span class="soon-badge" data-i18n="soon.badge">Bientôt</span></div>
+            <div class="project__body">
+              <h3 data-i18n="soon.hessoTitle">hes-so — design & simulation</h3>
+              <p data-i18n="soon.hessoDesc">Maquettes de sites web (Figma) et mini-jeu de simulation (NetLogo).</p>
+              <div class="project__chips"><span class="chip">Figma</span><span class="chip">NetLogo</span><span class="chip">UX/UI</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer__cta"><a href="contact.html" data-i18n-html="footer.cta">travaillons<br>ensemble</a></p>
+      <div class="footer__row">
+        <div>
+          <div style="font-family:var(--font-display);font-weight:800;font-size:1.2rem">Margarita Demakova</div>
+          <small data-i18n="footer.tagline">Conçu avec soin à Lausanne.</small>
+        </div>
+        <div class="footer__social">
+          <a href="mailto:margarita.demakova@heig-vd.ch" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/margarita-demakova-4a7880336/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.3c0-1.26-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div style="margin-top:18px"><small data-i18n="footer.rights">© 2026 Margarita Demakova</small></div>
+    </div>
+  </footer>
+
+</body>
+</html>

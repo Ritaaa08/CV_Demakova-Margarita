@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Margarita Demakova — Ingénierie des médias · Web & Design</title>
+  <meta name="description" content="Portfolio de Margarita Demakova, étudiante en ingénierie des médias à la HEIG-VD. Développement web, design et création — entre code et créativité." />
+  <meta property="og:title" content="Margarita Demakova — Portfolio" />
+  <meta property="og:description" content="Ingénierie des médias · Développement web & Design." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238B6CF0'/%3E%3Cstop offset='1' stop-color='%23E5739E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='13' fill='url(%23g)'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body data-page="home">
+
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="Margarita Demakova — accueil">
+        <span class="brand__mark">M</span>
+        <span class="brand__name">Margarita Demakova<small>Media engineering</small></span>
+      </a>
+      <nav class="nav__menu" aria-label="Navigation principale">
+        <a class="nav__link" data-nav="home" href="index.html" data-i18n="nav.home">Accueil</a>
+        <a class="nav__link" data-nav="cv" href="cv.html" data-i18n="nav.cv">CV</a>
+        <a class="nav__link" data-nav="projets" href="projets.html" data-i18n="nav.projects">Projets</a>
+        <a class="nav__link" data-nav="jeu" href="jeu.html" data-i18n="nav.game">Jeu</a>
+        <a class="nav__link" data-nav="contact" href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav__right">
+        <div class="lang" role="group" aria-label="Langue / Language">
+          <button data-lang-btn="fr" aria-pressed="true">FR</button>
+          <button data-lang-btn="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mnav" aria-label="Menu mobile">
+    <a data-nav="home" href="index.html" data-i18n="nav.home">Accueil</a>
+    <a data-nav="cv" href="cv.html" data-i18n="nav.cv">CV</a>
+    <a data-nav="projets" href="projets.html" data-i18n="nav.projects">Projets</a>
+    <a data-nav="jeu" href="jeu.html" data-i18n="nav.game">Jeu</a>
+    <a data-nav="contact" href="contact.html" data-i18n="nav.contact">Contact</a>
+    <div class="m-meta">
+      <div class="lang" role="group" aria-label="Langue / Language" style="margin-bottom:16px">
+        <button data-lang-btn="fr">FR</button><button data-lang-btn="en">EN</button>
+      </div>
+      margarita.demakova@heig-vd.ch
+    </div>
+  </div>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="kicker reveal" data-i18n="hero.kicker">Portfolio · Ingénierie des médias</p>
+          <h1 class="hero__title reveal reveal-d1">
+            <span class="hero__hello" data-i18n-html="hero.hello">bonjour,<br>je suis</span>
+            <span class="hero__name">margarita<br>demakova</span>
+          </h1>
+          <p class="hero__role reveal reveal-d2" data-i18n="hero.role">Étudiante en ingénierie des médias à la HEIG-VD.</p>
+          <div class="hero__cta reveal reveal-d3">
+            <a class="btn btn-primary" href="projets.html">
+              <span data-i18n="hero.ctaProjects">Voir mes projets</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-ghost" href="contact.html" data-i18n="hero.ctaContact">Me contacter</a>
+          </div>
+        </div>
+        <div class="hero__photo reveal reveal-d2">
+          <div class="hero__photo-frame"><img src="/photo.jpg" alt="Portrait de Margarita Demakova" /></div>
+          <div class="hero__badge"><span class="dot"></span><span data-i18n="hero.badge">Disponible pour un stage</span></div>
+        </div>
+      </div>
+      <div class="scroll-cue" aria-hidden="true"><span class="mouse"></span><span data-i18n="hero.scroll">défiler</span></div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span data-i18n="marquee">design · développement web · ux/ui · création · wordpress · ia générative · branding</span>
+        <span data-i18n="marquee">design · développement web · ux/ui · création · wordpress · ia générative · branding</span>
+      </div>
+    </div>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section">
+      <div class="wrap about__grid">
+        <div>
+          <p class="kicker reveal" data-i18n="about.kicker">À propos</p>
+          <p class="about__text reveal reveal-d1" data-i18n-html="about.text" style="margin-top:18px">Attirée par les croisements entre <em>design, technologie et communication</em>, je conçois des expériences web claires et centrées sur l'humain.</p>
+        </div>
+        <div class="about__meta">
+          <div class="stat reveal reveal-d1"><div class="num" data-i18n="about.stat1num">04</div><div class="lbl" data-i18n="about.stat1lbl">langues parlées</div></div>
+          <div class="stat reveal reveal-d2"><div class="num" data-i18n="about.stat2num">02</div><div class="lbl" data-i18n="about.stat2lbl">stages professionnels</div></div>
+          <div class="stat reveal reveal-d3"><div class="num" data-i18n="about.stat3num">2028</div><div class="lbl" data-i18n="about.stat3lbl">diplôme visé · HEIG-VD</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PLANET / SKILLS ===== -->
+    <section class="section planet-sec">
+      <div class="planet-sec__stars" aria-hidden="true"></div>
+      <div class="wrap planet-grid">
+        <div class="planet-stage reveal"><canvas id="planet-canvas"></canvas></div>
+        <div class="planet-copy">
+          <p class="kicker reveal" data-i18n="planet.kicker">Compétences</p>
+          <h2 class="reveal reveal-d1" data-i18n="planet.title">ma galaxie de compétences</h2>
+          <p class="lead reveal reveal-d2" data-i18n="planet.lead">Mes outils gravitent autour d'un même monde : créer, du design au code.</p>
+          <div class="skill-tags reveal reveal-d3">
+            <span class="skill-tag" data-i18n="skills.s1">HTML & CSS</span>
+            <span class="skill-tag" data-i18n="skills.s2">JavaScript</span>
+            <span class="skill-tag" data-i18n="skills.s3">WordPress & PHP</span>
+            <span class="skill-tag" data-i18n="skills.s4">Java</span>
+            <span class="skill-tag" data-i18n="skills.s5">Figma</span>
+            <span class="skill-tag" data-i18n="skills.s6">Suite Adobe</span>
+            <span class="skill-tag" data-i18n="skills.s7">SQL</span>
+            <span class="skill-tag" data-i18n="skills.s8">IA générative</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROJECTS PREVIEW ===== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="section-head reveal" style="max-width:none;display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+          <div>
+            <p class="kicker" data-i18n="proj.kicker">Projets</p>
+            <h2 data-i18n="proj.title">travaux sélectionnés</h2>
+          </div>
+          <a class="link-arrow" href="projets.html"><span data-i18n="proj.viewall">Tous les projets</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        </div>
+
+        <div class="projects-grid">
+          <!-- THENOX featured -->
+          <article class="card project project--featured reveal">
+            <div class="project__media">
+              <span class="project__tag" data-i18n="thenox.tag">HEIG-VD · 2025</span>
+              <img src="/projets/thenox-1.png" alt="THENOX — site web horloger cosmique" loading="lazy" />
+            </div>
+            <div class="project__body">
+              <h3>thenox.ch</h3>
+              <p data-i18n="thenox.desc">Marque horlogère cosmique : identité, site WordPress et contenus enrichis par l'IA générative.</p>
+              <div class="project__chips">
+                <span class="chip">Design</span><span class="chip">WordPress</span><span class="chip">HTML / CSS</span>
+                <span class="chip" data-i18n="skills.s8">IA générative</span><span class="chip">Marketing</span>
+              </div>
+              <div class="project__links">
+                <a class="link-arrow" href="https://thenox.ch" target="_blank" rel="noopener"><span data-i18n="thenox.live">Voir le site</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+                <a class="link-arrow" href="projets/thenox-rapport.pdf" target="_blank" rel="noopener"><span data-i18n="thenox.report">Rapport (PDF)</span> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Soon: EPFL -->
+          <article class="card project project--soon reveal reveal-d1">
+            <div class="project__media"><span class="soon-badge" data-i18n="soon.badge">Bientôt</span></div>
+            <div class="project__body">
+              <h3 data-i18n="soon.epflTitle">epfl — crypto & rpg</h3>
+              <p data-i18n="soon.epflDesc">Cryptographie, stéganographie et mini-jeu RPG en Java.</p>
+              <div class="project__chips"><span class="chip">Java</span><span class="chip">Cryptographie</span></div>
+            </div>
+          </article>
+
+          <!-- Soon: HES-SO -->
+          <article class="card project project--soon reveal reveal-d2">
+            <div class="project__media"><span class="soon-badge" data-i18n="soon.badge">Bientôt</span></div>
+            <div class="project__body">
+              <h3 data-i18n="soon.hessoTitle">hes-so — design & simulation</h3>
+              <p data-i18n="soon.hessoDesc">Maquettes de sites web (Figma) et mini-jeu de simulation (NetLogo).</p>
+              <div class="project__chips"><span class="chip">Figma</span><span class="chip">NetLogo</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer__cta"><a href="contact.html" data-i18n-html="footer.cta">travaillons<br>ensemble</a></p>
+      <div class="footer__row">
+        <div>
+          <div style="font-family:var(--font-display);font-weight:800;font-size:1.2rem">Margarita Demakova</div>
+          <small data-i18n="footer.tagline">Conçu avec soin à Lausanne.</small>
+        </div>
+        <div class="footer__social">
+          <a href="mailto:margarita.demakova@heig-vd.ch" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/margarita-demakova-4a7880336/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.3c0-1.26-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div style="margin-top:18px"><small data-i18n="footer.rights">© 2026 Margarita Demakova</small></div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,168 @@
+
+
+<div class="dr-planet-sec">
+  <div class="dr-planet-sticky">
+    <div class="dr-planet-stage"><canvas id="dr-planet-canvas"></canvas></div>
+    <div class="dr-planet-cap"><div class="dr-cap-in">
+      <p class="dr-kicker">Le terrain de jeu</p>
+      <h2>Une planète<br>pleine de <span>vélos</span>.</h2>
+      <p class="dr-lead">Elle flotte, elle tourne. Scrolle — tout l'univers DERAILED gravite autour.</p>
+    </div></div>
+  </div>
+</div>
+
+<style>
+  /* fond sombre : à mettre AUSSI sur la section Elementor ; ici en secours */
+  .dr-planet-sec{position:relative;height:200vh;background:#0e111c}
+  .dr-planet-sticky{position:sticky;top:0;height:100vh;overflow:hidden}
+  .dr-planet-stage{position:absolute;inset:0}
+  #dr-planet-canvas{display:block;width:100%;height:100%}
+  .dr-planet-cap{position:absolute;inset:0;z-index:3;display:flex;align-items:center;pointer-events:none}
+  .dr-cap-in{width:100%;max-width:1180px;margin:0 auto;padding:0 28px}
+  .dr-kicker{font:600 12.5px/1 'Space Grotesk',system-ui,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#ff4a1c;margin:0}
+  .dr-planet-cap h2{font-family:'Anton',Impact,sans-serif;font-weight:400;text-transform:uppercase;line-height:.98;font-size:clamp(32px,5vw,70px);color:#eceefb;margin:14px 0 16px}
+  .dr-planet-cap h2 span{color:#ff4a1c}
+  .dr-lead{font:300 18px/1.5 'Space Grotesk',system-ui,sans-serif;color:#c3c8e4;max-width:30ch;margin:0}
+  @media(max-width:820px){
+    .dr-planet-sec{height:170vh}
+    /* mobile : texte EN HAUT, planète EN DESSOUS (empilés) */
+    .dr-planet-sticky{display:flex;flex-direction:column}
+    .dr-planet-cap{position:static;inset:auto;order:-1;display:block;padding:84px 22px 8px;pointer-events:auto}
+    .dr-planet-cap .dr-cap-in{padding:0}
+    .dr-planet-stage{position:static;flex:1 1 auto;min-height:0}
+  }
+</style>
+
+<script type="module">
+import * as THREE from 'https://unpkg.com/three@0.167.0/build/three.module.js';
+
+
+const ASSETS = {
+  planet:   'https://TON-SITE.ch/wp-content/uploads/2026/06/planet-2.png',
+  cycliste: 'https://TON-SITE.ch/wp-content/uploads/2026/06/cycliste.png',
+  spray:    'https://TON-SITE.ch/wp-content/uploads/2026/06/1.png',
+  ticket:   'https://TON-SITE.ch/wp-content/uploads/2026/06/2.png',
+  notes:    'https://TON-SITE.ch/wp-content/uploads/2026/06/3.png',
+};
+
+
+/* ===== Réglages (identiques à la maquette) ===== */
+const PLANET_R=1.35, PLANET_IMG=PLANET_R*2.2, RING_IN=1.62, RING_OUT=2.70, RING_DIV=5;
+const TILT_X=-1.00, TILT_Z=0.12, BASE_Z=7.8, FRAME_X=1.65, FRAME_Y=0.75;
+const SCROLL_TO_SPIN=0.0026, SPIN_DIR=+1, SPIN_LERP=0.08, FLOAT_AMP=0.10, FLOAT_SPEED=0.85;
+const OBJECT_R=2.15, OBJECT_SIZE=0.84;
+const OBJECTS=[
+  {url:ASSETS.cycliste,s:1.00},{url:ASSETS.spray,s:0.72},{url:ASSETS.ticket,s:0.70},
+  {url:ASSETS.cycliste,s:1.00},{url:ASSETS.notes,s:0.74},{url:ASSETS.spray,s:0.72},
+];
+
+const canvas=document.getElementById('dr-planet-canvas');
+const stage=canvas.parentElement;
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+const scene=new THREE.Scene();
+const camera=new THREE.PerspectiveCamera(38,1,0.1,100);
+camera.position.set(0,0,BASE_Z);
+scene.add(new THREE.AmbientLight(0xffffff,0.95));
+const key=new THREE.DirectionalLight(0xfff1e2,0.9); key.position.set(-2,5,4); scene.add(key);
+
+const floatGroup=new THREE.Group(); scene.add(floatGroup);
+const system=new THREE.Group(); system.rotation.x=TILT_X; system.rotation.z=TILT_Z; floatGroup.add(system);
+
+let ring, planet, frameX=FRAME_X;
+let scrollTarget=window.scrollY, scrollCurrent=scrollTarget;
+addEventListener('scroll',()=>{scrollTarget=window.scrollY;},{passive:true});
+const reduceMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const clock=new THREE.Clock();
+
+const objURLs=[...new Set(OBJECTS.map(o=>o.url))];
+Promise.all([loadTex(ASSETS.planet,true),...objURLs.map(u=>loadTex(u,true))]).then(res=>{
+  const pTex=res[0], texMap={}; objURLs.forEach((u,i)=>texMap[u]=res[i+1]);
+  build(pTex,texMap); resize(); animate();
+});
+
+function build(pTex,texMap){
+  planet=new THREE.Mesh(new THREE.PlaneGeometry(PLANET_IMG,PLANET_IMG),
+    new THREE.MeshBasicMaterial({map:pTex,transparent:false,alphaTest:0.4}));
+  planet.renderOrder=-10; floatGroup.add(planet);
+
+  ring=new THREE.Mesh(new THREE.RingGeometry(RING_IN,RING_OUT,240,1),
+    new THREE.MeshBasicMaterial({map:makeRingTexture(),side:THREE.DoubleSide,transparent:true,depthWrite:false}));
+  ring.renderOrder=1; system.add(ring);
+
+  OBJECTS.forEach((o,i)=>{
+    const tex=texMap[o.url]; if(!tex) return;
+    const a=(i/OBJECTS.length)*Math.PI*2;
+    const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:tex,transparent:true,alphaTest:0.3,depthWrite:false}));
+    const aspect=(tex.image&&tex.image.width/tex.image.height)||1, h=OBJECT_SIZE*o.s;
+    sp.scale.set(h*aspect,h,1);
+    sp.position.set(Math.cos(a)*OBJECT_R,Math.sin(a)*OBJECT_R,0);
+    sp.renderOrder=2; ring.add(sp);
+  });
+}
+
+function animate(){
+  requestAnimationFrame(animate);
+  if(!ring) return;
+  const t=clock.getElapsedTime();
+  scrollCurrent+=(scrollTarget-scrollCurrent)*SPIN_LERP;
+  ring.rotation.z=SPIN_DIR*scrollCurrent*SCROLL_TO_SPIN;
+  floatGroup.position.x=frameX;
+  if(!reduceMotion){
+    floatGroup.position.y=FRAME_Y+Math.sin(t*FLOAT_SPEED)*FLOAT_AMP;
+    system.rotation.z=TILT_Z+Math.sin(t*FLOAT_SPEED*0.6)*0.010;
+  } else floatGroup.position.y=FRAME_Y;
+  renderer.render(scene,camera);
+}
+
+function resize(){
+  const w=stage.clientWidth, h=stage.clientHeight;
+  renderer.setSize(w,h,false);
+  const aspect=w/h; camera.aspect=aspect;
+  camera.position.z=aspect<1.2?BASE_Z*(1.2/aspect):BASE_Z;
+  frameX=FRAME_X*Math.min(1,aspect/1.2);
+  if(window.innerWidth<=820) frameX=0;   // mobile : planète centrée horizontalement
+  camera.updateProjectionMatrix();
+}
+addEventListener('resize',resize);
+
+function loadTex(url,keyWhite){
+  return new Promise(resolve=>{
+    const img=new Image(); img.crossOrigin='anonymous';
+    img.onload=()=>{
+      const cv=document.createElement('canvas'); cv.width=img.width; cv.height=img.height;
+      const cx=cv.getContext('2d'); cx.drawImage(img,0,0);
+      if(keyWhite){
+        try{
+          const im=cx.getImageData(0,0,cv.width,cv.height), d=im.data;
+          for(let i=0;i<d.length;i+=4) if(d[i]>234&&d[i+1]>234&&d[i+2]>234) d[i+3]=0;
+          cx.putImageData(im,0,0);
+        }catch(e){ /* images cross-origin sans CORS : voir note dans le chat */ }
+      }
+      const tex=new THREE.CanvasTexture(cv); tex.colorSpace=THREE.SRGBColorSpace; tex.anisotropy=8;
+      resolve(tex);
+    };
+    img.onerror=()=>resolve(null);
+    img.src=encodeURI(url);
+  });
+}
+
+function makeRingTexture(){
+  const S=2048,c=document.createElement('canvas'); c.width=S; c.height=S;
+  const x=c.getContext('2d'), cx=S/2, cy=S/2, pr=rW=>rW*S/(2*RING_OUT), rin=pr(RING_IN), rout=pr(RING_OUT);
+  const shades=['#EAEFF2','#DFE7EC','#E6EDF1'];
+  for(let r=RING_OUT;r>=RING_IN;r-=0.012){const t=(r-RING_IN)/(RING_OUT-RING_IN);
+    x.fillStyle=shades[Math.floor(t*3)%shades.length]; x.beginPath(); x.arc(cx,cy,pr(r),0,6.2832); x.fill();}
+  for(let i=0;i<16000;i++){const ang=Math.random()*6.2832, rr=rin+Math.random()*(rout-rin);
+    const px=cx+Math.cos(ang)*rr, py=cy+Math.sin(ang)*rr, g=70+Math.random()*120;
+    x.fillStyle=`rgba(${g|0},${(g+12)|0},${(g+28)|0},${(0.05+Math.random()*0.13).toFixed(3)})`; x.fillRect(px,py,1.7,1.7);}
+  x.strokeStyle='#1b1d31'; x.lineJoin='round'; x.lineCap='round';
+  for(let i=0;i<=RING_DIV;i++){const baseR=pr(RING_IN+(i/RING_DIV)*(RING_OUT-RING_IN));
+    x.lineWidth=(i===0||i===RING_DIV)?3.2:1.9; x.beginPath();
+    const N=240; for(let k=0;k<=N;k++){const ang=(k/N)*6.2832;
+      const rr=baseR+Math.sin(ang*7+i*1.7)*1.4+(Math.random()-0.5)*2.0;
+      const px=cx+Math.cos(ang)*rr, py=cy+Math.sin(ang)*rr; k===0?x.moveTo(px,py):x.lineTo(px,py);}
+    x.closePath(); x.stroke();}
+  const tex=new THREE.CanvasTexture(c); tex.colorSpace=THREE.SRGBColorSpace; tex.anisotropy=8; return tex;
+}
+</script>

@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CV — Margarita Demakova</title>
+  <meta name="description" content="CV de Margarita Demakova : formation, expérience, compétences, langues et certifications. Ingénierie des médias — développement web & design." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238B6CF0'/%3E%3Cstop offset='1' stop-color='%23E5739E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='13' fill='url(%23g)'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body data-page="cv">
+
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="Margarita Demakova — accueil">
+        <span class="brand__mark">M</span>
+        <span class="brand__name">Margarita Demakova<small>Media engineering</small></span>
+      </a>
+      <nav class="nav__menu" aria-label="Navigation principale">
+        <a class="nav__link" data-nav="home" href="index.html" data-i18n="nav.home">Accueil</a>
+        <a class="nav__link" data-nav="cv" href="cv.html" data-i18n="nav.cv">CV</a>
+        <a class="nav__link" data-nav="projets" href="projets.html" data-i18n="nav.projects">Projets</a>
+        <a class="nav__link" data-nav="jeu" href="jeu.html" data-i18n="nav.game">Jeu</a>
+        <a class="nav__link" data-nav="contact" href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav__right">
+        <div class="lang" role="group" aria-label="Langue / Language">
+          <button data-lang-btn="fr" aria-pressed="true">FR</button>
+          <button data-lang-btn="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mnav" aria-label="Menu mobile">
+    <a data-nav="home" href="index.html" data-i18n="nav.home">Accueil</a>
+    <a data-nav="cv" href="cv.html" data-i18n="nav.cv">CV</a>
+    <a data-nav="projets" href="projets.html" data-i18n="nav.projects">Projets</a>
+    <a data-nav="jeu" href="jeu.html" data-i18n="nav.game">Jeu</a>
+    <a data-nav="contact" href="contact.html" data-i18n="nav.contact">Contact</a>
+    <div class="m-meta">
+      <div class="lang" role="group" aria-label="Langue / Language" style="margin-bottom:16px">
+        <button data-lang-btn="fr">FR</button><button data-lang-btn="en">EN</button>
+      </div>
+      margarita.demakova@heig-vd.ch
+    </div>
+  </div>
+
+  <main>
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="kicker reveal" style="margin-bottom:14px">Curriculum vitæ</p>
+        <h1 class="reveal reveal-d1" data-i18n="cv.title">cv</h1>
+        <p class="lead reveal reveal-d2" data-i18n="cv.lead">Mon parcours, mes compétences et mes certifications — en un coup d'œil.</p>
+        <div class="reveal reveal-d3" style="margin-top:28px">
+          <a class="btn btn-primary" href="cv.pdf" target="_blank" rel="noopener" download>
+            <span data-i18n="cv.download">Télécharger le PDF</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CV BODY ===== -->
+    <section class="section" style="padding-top:clamp(48px,7vw,90px)">
+      <div class="wrap cv-cols">
+
+        <!-- LEFT : timelines -->
+        <div>
+          <h2 class="reveal" data-i18n="cv.formation" style="font-size:clamp(1.8rem,4vw,2.6rem);text-transform:lowercase;margin-bottom:34px">Formation</h2>
+          <div class="timeline">
+            <div class="tl-item reveal"><span class="date" data-i18n="edu.e1d"></span><h3 data-i18n="edu.e1t"></h3><p class="org" data-i18n="edu.e1o"></p></div>
+            <div class="tl-item reveal"><span class="date" data-i18n="edu.e2d"></span><h3 data-i18n="edu.e2t"></h3><p class="org" data-i18n="edu.e2o"></p><p class="extra" data-i18n="edu.e2x"></p></div>
+            <div class="tl-item reveal"><span class="date" data-i18n="edu.e3d"></span><h3 data-i18n="edu.e3t"></h3><p class="org" data-i18n="edu.e3o"></p></div>
+            <div class="tl-item reveal"><span class="date" data-i18n="edu.e4d"></span><h3 data-i18n="edu.e4t"></h3><p class="org" data-i18n="edu.e4o"></p></div>
+            <div class="tl-item reveal"><span class="date" data-i18n="edu.e5d"></span><h3 data-i18n="edu.e5t"></h3><p class="org" data-i18n="edu.e5o"></p><p class="extra" data-i18n="edu.e5x"></p></div>
+            <div class="tl-item reveal"><span class="date" data-i18n="edu.e6d"></span><h3 data-i18n="edu.e6t"></h3><p class="org" data-i18n="edu.e6o"></p></div>
+            <div class="tl-item reveal"><span class="date" data-i18n="edu.e7d"></span><h3 data-i18n="edu.e7t"></h3><p class="org" data-i18n="edu.e7o"></p></div>
+          </div>
+
+          <h2 class="reveal" data-i18n="cv.experience" style="font-size:clamp(1.8rem,4vw,2.6rem);text-transform:lowercase;margin:54px 0 34px">Expérience</h2>
+          <div class="timeline">
+            <div class="tl-item reveal"><span class="date" data-i18n="exp.x2d"></span><h3 data-i18n="exp.x2t"></h3><p class="org" data-i18n="exp.x2o"></p><p class="extra" data-i18n="exp.x2x"></p></div>
+            <div class="tl-item reveal"><span class="date" data-i18n="exp.x1d"></span><h3 data-i18n="exp.x1t"></h3><p class="org" data-i18n="exp.x1o"></p><p class="extra" data-i18n="exp.x1x"></p></div>
+          </div>
+        </div>
+
+        <!-- RIGHT : aside -->
+        <aside style="display:grid;gap:clamp(36px,5vw,52px);align-content:start">
+          <div>
+            <h2 class="reveal" data-i18n="cv.languages" style="font-size:1.5rem;text-transform:lowercase;margin-bottom:24px">Langues</h2>
+            <div class="bars">
+              <div class="bar-row reveal"><div class="bar-top"><span data-i18n="cv.nRu">Russe</span><span data-i18n="cv.native">langue maternelle</span></div><div class="bar-track"><div class="bar-fill" data-val="100"></div></div></div>
+              <div class="bar-row reveal"><div class="bar-top"><span data-i18n="cv.nFr">Français</span><span data-i18n="cv.fluent">C1 · courant</span></div><div class="bar-track"><div class="bar-fill" data-val="92"></div></div></div>
+              <div class="bar-row reveal"><div class="bar-top"><span data-i18n="cv.nEn">Anglais</span><span data-i18n="cv.pro">B2 · opérationnel</span></div><div class="bar-track"><div class="bar-fill" data-val="75"></div></div></div>
+              <div class="bar-row reveal"><div class="bar-top"><span data-i18n="cv.nIt">Italien</span><span data-i18n="cv.inter">A2 · intermédiaire</span></div><div class="bar-track"><div class="bar-fill" data-val="42"></div></div></div>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="reveal" data-i18n="cv.tools" style="font-size:1.5rem;text-transform:lowercase;margin-bottom:20px">Outils & technologies</h2>
+            <div class="tag-cloud reveal">
+              <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span><span class="chip">PHP</span>
+              <span class="chip">WordPress</span><span class="chip">SQL</span><span class="chip">Java</span><span class="chip">Figma</span>
+              <span class="chip">Photoshop</span><span class="chip">Illustrator</span><span class="chip">InDesign</span><span class="chip">MS Office</span>
+              <span class="chip" data-i18n="skills.s8">IA générative</span>
+            </div>
+          </div>
+
+          <div>
+            <h2 class="reveal" data-i18n="cv.interests" style="font-size:1.5rem;text-transform:lowercase;margin-bottom:20px">Intérêts</h2>
+            <div class="tag-cloud reveal">
+              <span class="chip" data-i18n="interest.i1">Astrophysique</span>
+              <span class="chip" data-i18n="interest.i2">Photographie</span>
+              <span class="chip" data-i18n="interest.i3">Peinture</span>
+              <span class="chip" data-i18n="interest.i4">Calligraphie</span>
+              <span class="chip" data-i18n="interest.i5">Alpinisme</span>
+              <span class="chip" data-i18n="interest.i6">Gymnastique rythmique</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ===== CERTIFICATES ===== -->
+    <section class="section" style="background:var(--surface-soft);padding-top:clamp(56px,8vw,100px)">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker" data-i18n="cv.certs">Certifications</p>
+          <h2 data-i18n="cv.certs" style="font-size:clamp(2rem,5vw,3.4rem);text-transform:lowercase;margin-top:14px">Certifications</h2>
+        </div>
+        <div class="cert-grid">
+          <a class="cert reveal" href="certificats/meta.png" target="_blank" rel="noopener">
+            <img src="/certificats/meta.png" alt="Certificat Meta — Database Structures and Management with MySQL" loading="lazy" />
+            <div class="cert__cap"><h4 data-i18n="certMeta">Database Structures and Management with MySQL</h4><p data-i18n="certMetaSub">Meta · Coursera · 2024</p></div>
+          </a>
+          <a class="cert reveal reveal-d1" href="certificats/boardinfinity.png" target="_blank" rel="noopener">
+            <img src="/certificats/boardinfinity.png" alt="Certificat Board Infinity — C# for .NET Developers" loading="lazy" />
+            <div class="cert__cap"><h4 data-i18n="certBI">C# for .NET Developers</h4><p data-i18n="certBISub">Board Infinity · Coursera · 2024</p></div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer__cta"><a href="contact.html" data-i18n-html="footer.cta">travaillons<br>ensemble</a></p>
+      <div class="footer__row">
+        <div>
+          <div style="font-family:var(--font-display);font-weight:800;font-size:1.2rem">Margarita Demakova</div>
+          <small data-i18n="footer.tagline">Conçu avec soin à Lausanne.</small>
+        </div>
+        <div class="footer__social">
+          <a href="mailto:margarita.demakova@heig-vd.ch" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/margarita-demakova-4a7880336/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.3c0-1.26-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div style="margin-top:18px"><small data-i18n="footer.rights">© 2026 Margarita Demakova</small></div>
+    </div>
+  </footer>
+
+</body>
+</html>

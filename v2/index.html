@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demakova Margarita — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Curseur personnalisé -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- Barre de progression de scroll -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="../LOGO.png" alt="Logo" class="logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="#hero">ACCUEIL</a></li>
+        <li><a href="#parcours">PARCOURS</a></li>
+        <li><a href="#competences">COMPÉTENCES</a></li>
+        <li><a href="#certificats">CERTIFICATS</a></li>
+        <li><a href="#contacts">CONTACTS</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#hero">ACCUEIL</a>
+      <a href="#parcours">PARCOURS</a>
+      <a href="#competences">COMPÉTENCES</a>
+      <a href="#certificats">CERTIFICATS</a>
+      <a href="#contacts">CONTACTS</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="hero-content">
+      <div class="photo-container" id="photoContainer">
+        <div class="photo-frame">
+          <img src="../CV_PHOTO.png" alt="Margarita Demakova" class="hero-photo">
+          <div class="photo-border-1"></div>
+          <div class="photo-border-2"></div>
+          <div class="photo-glow"></div>
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <p class="hero-greeting">BIENVENUE</p>
+        <h1 class="hero-name">
+          <span class="name-line">DEMAKOVA</span>
+          <span class="name-line accent" id="typingText"></span>
+        </h1>
+        <p class="hero-subtitle">ÉTUDIANTE EN INGÉNIERIE DES MÉDIAS</p>
+        <p class="hero-school">HEIG-VD</p>
+
+        <div class="hero-tags">
+          <span class="tag">Design</span>
+          <span class="tag">Technologie</span>
+          <span class="tag">Communication</span>
+          <span class="tag">Innovation</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#parcours" class="btn-primary">Découvrir</a>
+          <a href="../Margarita_Demakova_CV.pdf" download class="btn-outline">Télécharger CV</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== INTRO ===== -->
+  <section class="about-section reveal" id="about">
+    <div class="about-inner">
+      <div class="about-dots">
+        <span class="dot white"></span>
+        <span class="dot light"></span>
+        <span class="dot purple"></span>
+      </div>
+      <p class="about-text">
+        Attirée par les interactions entre <em>design</em>, <em>technologie</em> et <em>communication</em>,
+        j'ai choisi de me former en ingénierie des médias à la HEIG-VD. Mon intérêt pour l'innovation
+        est nourri de curiosité, d'envie d'apprendre et d'une sensibilité pour l'humain au cœur de l'innovation.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== PARCOURS ===== -->
+  <section class="timeline-section" id="parcours">
+    <div class="section-header reveal">
+      <h2 class="section-title">PARCOURS</h2>
+      <div class="title-line"></div>
+    </div>
+
+    <div class="timeline-tabs">
+      <button class="tab-btn active" data-tab="formation">FORMATION</button>
+      <button class="tab-btn" data-tab="experience">EXPÉRIENCE</button>
+    </div>
+
+    <!-- Formation -->
+    <div class="timeline" id="timelineFormation">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">2009 — 2020</span>
+          <h3>Enseignement Secondaire Général</h3>
+          <p>MBOU "SOSH p.Nizhny Arkhyz"</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">2017 — 2020</span>
+          <h3>Formation en Design & Art</h3>
+          <p>Accompagnement artistique personnalisé</p>
+          <p class="timeline-extra">Techniques de design et art visuel</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">2020 — 2023</span>
+          <h3>Maturité Suisse</h3>
+          <p>EPSU — Genève</p>
+          <p class="timeline-extra">Option complémentaire : Physique<br>TM : De l'étude à la recherche des trous noirs</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">2023 — 2024</span>
+          <h3>Bachelor en Systèmes de Communication</h3>
+          <p>EPFL — École Polytechnique Fédérale de Lausanne</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">2024 — 2025</span>
+          <h3>APFI — Année Préparatoire Future Ingénieure</h3>
+          <p>HES-SO — Haute École Spécialisée de Suisse occidentale</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot active"></div>
+        <div class="timeline-card featured">
+          <span class="timeline-date">2025 — 2028</span>
+          <h3>Bachelor en Ingénierie des Médias</h3>
+          <p>HEIG-VD</p>
+          <p class="timeline-extra">Communication digitale · Développement web · Design UX · Gestion de projets · Pilotage produit</p>
+          <span class="badge">En cours</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Expérience -->
+    <div class="timeline hidden" id="timelineExperience">
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <span class="timeline-date">02/2025 — 06/2025</span>
+          <h3>Espace Graphic Sàrl</h3>
+          <p>Stage en Ingénierie des Médias</p>
+          <p class="timeline-extra">Contact clientèle · Production de projets · Graphisme & Design</p>
+        </div>
+      </div>
+      <div class="timeline-item reveal">
+        <div class="timeline-dot active"></div>
+        <div class="timeline-card featured">
+          <span class="timeline-date">08/2025 — 12/2025</span>
+          <h3>Media Engineering Institute (MEI)</h3>
+          <p>Stage en Ingénierie des Médias</p>
+          <p class="timeline-extra">IA : génération textes & images · Développement web · Documentation tests utilisateurs</p>
+          <span class="badge">En cours</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COMPÉTENCES ===== -->
+  <section class="skills-section" id="competences">
+    <div class="section-header reveal">
+      <h2 class="section-title">COMPÉTENCES</h2>
+      <div class="title-line"></div>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon">💻</div>
+        <h3>Programmation</h3>
+        <div class="skill-tags">
+          <span>Python</span><span>JavaScript</span><span>HTML/CSS</span><span>NetLogo</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🎨</div>
+        <h3>Design & Créativité</h3>
+        <div class="skill-tags">
+          <span>Figma</span><span>Esquisses</span><span>Dessin artistique</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">📦</div>
+        <h3>Bureautique</h3>
+        <div class="skill-tags">
+          <span>Word</span><span>PowerPoint</span><span>Excel</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🔧</div>
+        <h3>Conception 3D</h3>
+        <div class="skill-tags">
+          <span>SolidWorks</span>
+        </div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🤖</div>
+        <h3>Intelligence Artificielle</h3>
+        <div class="skill-tags">
+          <span>Génération de textes</span><span>Génération d'images</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Langues -->
+    <div class="languages reveal">
+      <h2 class="section-title" style="margin-top:60px; margin-bottom:16px;">LANGUES</h2>
+      <div class="title-line" style="margin-bottom:40px;"></div>
+      <div class="lang-bars">
+        <div class="lang-item">
+          <div class="lang-info">
+            <span class="lang-name">Russe</span>
+            <span class="lang-level">Langue maternelle</span>
+          </div>
+          <div class="lang-bar">
+            <div class="lang-fill" data-width="100"></div>
+          </div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-info">
+            <span class="lang-name">Français</span>
+            <span class="lang-level">Avancé (C1)</span>
+          </div>
+          <div class="lang-bar">
+            <div class="lang-fill" data-width="90"></div>
+          </div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-info">
+            <span class="lang-name">Anglais</span>
+            <span class="lang-level">Intermédiaire (B2)</span>
+          </div>
+          <div class="lang-bar">
+            <div class="lang-fill" data-width="73"></div>
+          </div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-info">
+            <span class="lang-name">Italien</span>
+            <span class="lang-level">Élémentaire (A2)</span>
+          </div>
+          <div class="lang-bar">
+            <div class="lang-fill" data-width="55"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CERTIFICATS ===== -->
+  <section class="certs-section" id="certificats">
+    <div class="section-header reveal">
+      <h2 class="section-title">CERTIFICATS</h2>
+      <div class="title-line"></div>
+    </div>
+
+    <div class="certs-grid">
+      <div class="cert-card reveal" onclick="openLightbox('../Certificat_Meta.png', 'Meta Marketing Analytics')">
+        <div class="cert-img-wrapper">
+          <img src="../Certificat_Meta.png" alt="Certificat Meta">
+          <div class="cert-overlay"><span>VOIR</span></div>
+        </div>
+        <p>Meta Marketing Analytics</p>
+      </div>
+      <div class="cert-card reveal" onclick="openLightbox('../Certificat_C.png', 'Certificat Programmation C')">
+        <div class="cert-img-wrapper">
+          <img src="../Certificat_C.png" alt="Certificat C">
+          <div class="cert-overlay"><span>VOIR</span></div>
+        </div>
+        <p>Programmation C</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTS ===== -->
+  <section class="contact-section" id="contacts">
+    <div class="section-header reveal">
+      <h2 class="section-title">CONTACTS</h2>
+      <div class="title-line"></div>
+    </div>
+
+    <div class="contact-cards">
+      <div class="contact-card reveal" onclick="copyEmail()">
+        <div class="contact-icon">📧</div>
+        <div class="contact-info">
+          <span class="contact-label">Email</span>
+          <span class="contact-value">margarita.demakova@heig-vd.ch</span>
+        </div>
+        <span class="copy-hint">Copier</span>
+      </div>
+      <a class="contact-card reveal" href="https://www.linkedin.com/in/margarita-demakova-4a7880336/" target="_blank" rel="noopener">
+        <div class="contact-icon">🔗</div>
+        <div class="contact-info">
+          <span class="contact-label">LinkedIn</span>
+          <span class="contact-value">Demakova Margarita</span>
+        </div>
+        <span class="copy-hint">Ouvrir →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Demakova Margarita · Ingénierie des Médias · HEIG-VD</p>
+  </footer>
+
+  <!-- Bouton retour en haut -->
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-content" onclick="event.stopPropagation()">
+      <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+      <img id="lightboxImg" src="" alt="">
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast" id="toast">Copié dans le presse-papiers !</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

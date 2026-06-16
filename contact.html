@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Margarita Demakova</title>
+  <meta name="description" content="Contactez Margarita Demakova — étudiante en ingénierie des médias à Lausanne. Email, téléphone, LinkedIn." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%238B6CF0'/%3E%3Cstop offset='1' stop-color='%23E5739E'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='13' fill='url(%23g)'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body data-page="contact">
+
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a class="brand" href="index.html" aria-label="Margarita Demakova — accueil">
+        <span class="brand__mark">M</span>
+        <span class="brand__name">Margarita Demakova<small>Media engineering</small></span>
+      </a>
+      <nav class="nav__menu" aria-label="Navigation principale">
+        <a class="nav__link" data-nav="home" href="index.html" data-i18n="nav.home">Accueil</a>
+        <a class="nav__link" data-nav="cv" href="cv.html" data-i18n="nav.cv">CV</a>
+        <a class="nav__link" data-nav="projets" href="projets.html" data-i18n="nav.projects">Projets</a>
+        <a class="nav__link" data-nav="jeu" href="jeu.html" data-i18n="nav.game">Jeu</a>
+        <a class="nav__link" data-nav="contact" href="contact.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="nav__right">
+        <div class="lang" role="group" aria-label="Langue / Language">
+          <button data-lang-btn="fr" aria-pressed="true">FR</button>
+          <button data-lang-btn="en" aria-pressed="false">EN</button>
+        </div>
+        <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mnav" aria-label="Menu mobile">
+    <a data-nav="home" href="index.html" data-i18n="nav.home">Accueil</a>
+    <a data-nav="cv" href="cv.html" data-i18n="nav.cv">CV</a>
+    <a data-nav="projets" href="projets.html" data-i18n="nav.projects">Projets</a>
+    <a data-nav="jeu" href="jeu.html" data-i18n="nav.game">Jeu</a>
+    <a data-nav="contact" href="contact.html" data-i18n="nav.contact">Contact</a>
+    <div class="m-meta">
+      <div class="lang" role="group" aria-label="Langue / Language" style="margin-bottom:16px">
+        <button data-lang-btn="fr">FR</button><button data-lang-btn="en">EN</button>
+      </div>
+      margarita.demakova@heig-vd.ch
+    </div>
+  </div>
+
+  <main>
+    <!-- ===== PAGE HERO ===== -->
+    <section class="page-hero">
+      <div class="wrap">
+        <p class="kicker reveal" data-i18n="contact.title" style="margin-bottom:14px">contact</p>
+        <h1 class="reveal reveal-d1" data-i18n="contact.title">contact</h1>
+        <p class="lead reveal reveal-d2" data-i18n="contact.lead">Un projet, une opportunité de stage, ou juste envie d'échanger ? Écris-moi.</p>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT BODY ===== -->
+    <section class="section" style="padding-top:clamp(36px,6vw,72px)">
+      <div class="wrap contact-grid">
+
+        <!-- LEFT : info -->
+        <div class="contact-list">
+          <a class="contact-item reveal" href="mailto:margarita.demakova@heig-vd.ch">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+            <span><span class="ci-label" data-i18n="contact.email">Email</span><br><span class="ci-value">margarita.demakova@heig-vd.ch</span></span>
+          </a>
+          <a class="contact-item reveal reveal-d1" href="tel:+41782012825">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span>
+            <span><span class="ci-label" data-i18n="contact.phone">Téléphone</span><br><span class="ci-value">+41 78 201 28 25</span></span>
+          </a>
+          <a class="contact-item reveal reveal-d2" href="https://www.google.com/maps/place/Lausanne" target="_blank" rel="noopener">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.3 7-11a7 7 0 1 0-14 0c0 5.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
+            <span><span class="ci-label" data-i18n="contact.location">Localisation</span><br><span class="ci-value" data-i18n="contact.locValue">Lausanne, Suisse</span></span>
+          </a>
+          <a class="contact-item reveal reveal-d3" href="https://www.linkedin.com/in/margarita-demakova-4a7880336/" target="_blank" rel="noopener">
+            <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.3c0-1.26-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9z"/></svg></span>
+            <span><span class="ci-label" data-i18n="contact.linkedin">LinkedIn</span><br><span class="ci-value">Margarita Demakova</span></span>
+          </a>
+        </div>
+
+        <!-- RIGHT : form -->
+        <form class="form reveal reveal-d1" data-contact-form>
+          <h2 data-i18n="contact.formTitle" style="font-size:1.5rem;text-transform:lowercase;margin-bottom:4px">Envoyer un message</h2>
+          <div class="field">
+            <label for="cf-name" data-i18n="form.name">Nom</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required data-i18n-attr="placeholder:form.phName" placeholder="Votre nom" />
+          </div>
+          <div class="field">
+            <label for="cf-email" data-i18n="form.email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required data-i18n-attr="placeholder:form.phEmail" placeholder="vous@exemple.com" />
+          </div>
+          <div class="field">
+            <label for="cf-msg" data-i18n="form.message">Message</label>
+            <textarea id="cf-msg" name="message" required data-i18n-attr="placeholder:form.phMsg" placeholder="Bonjour Margarita, …"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit" style="justify-content:center">
+            <span data-i18n="contact.send">Envoyer le message</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form__note" data-i18n="contact.note">Ce bouton ouvre votre application de messagerie.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="wrap">
+      <p class="footer__cta"><a href="mailto:margarita.demakova@heig-vd.ch" data-i18n-html="footer.cta">travaillons<br>ensemble</a></p>
+      <div class="footer__row">
+        <div>
+          <div style="font-family:var(--font-display);font-weight:800;font-size:1.2rem">Margarita Demakova</div>
+          <small data-i18n="footer.tagline">Conçu avec soin à Lausanne.</small>
+        </div>
+        <div class="footer__social">
+          <a href="mailto:margarita.demakova@heig-vd.ch" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/margarita-demakova-4a7880336/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.3c0-1.26-.02-2.9-1.77-2.9-1.77 0-2.04 1.38-2.04 2.8V21H9z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div style="margin-top:18px"><small data-i18n="footer.rights">© 2026 Margarita Demakova</small></div>
+    </div>
+  </footer>
+
+</body>
+</html>
