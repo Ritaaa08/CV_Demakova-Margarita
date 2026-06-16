@@ -19,7 +19,7 @@ renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
-const CAM_Z = 8.2;
+const CAM_Z = 8.4;
 camera.position.set(0, 0, CAM_Z);
 
 scene.add(new THREE.AmbientLight(0xffffff, 1.0));
@@ -32,9 +32,9 @@ system.rotation.z = 0.14;
 floatGroup.add(system);
 
 const TILT_Z = 0.14;
-const ORBIT_R = 2.15;
-const LOGO_SIZE = 0.62;
-const RING_IN = 1.95, RING_OUT = 2.55;
+const ORBIT_R = 2.4;
+const LOGO_SIZE = 0.78;
+const RING_IN = 2.15, RING_OUT = 2.78;
 
 let ring, planet;
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -55,7 +55,7 @@ Promise.all([
 function build(planetTex, logoTexs) {
   // Planet
   const pAspect = (planetTex.image && planetTex.image.width / planetTex.image.height) || 0.78;
-  const pH = 3.15, pW = pH * pAspect;
+  const pH = 3.7, pW = pH * pAspect;
   planet = new THREE.Mesh(
     new THREE.PlaneGeometry(pW, pH),
     new THREE.MeshBasicMaterial({ map: planetTex, transparent: true })

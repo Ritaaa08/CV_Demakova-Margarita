@@ -12,7 +12,7 @@ export const dict = {
 
     hero: {
       kicker: 'Portfolio · Ingénierie des médias',
-      hello: 'bonjour,<br>je suis',
+      hello: 'Bonjour,<br>je suis',
       role: 'Étudiante en ingénierie des médias à la HEIG-VD. Je crée des expériences web entre design et développement.',
       ctaProjects: 'Voir mes projets',
       ctaContact: 'Me contacter',
@@ -32,27 +32,27 @@ export const dict = {
 
     planet: {
       kicker: 'Compétences',
-      title: 'ma galaxie de compétences',
+      title: 'Ma galaxie de compétences',
       lead: 'Mes outils gravitent autour d\'un même monde : créer, du design au code. La planète tourne au fil du défilement.',
     },
     skills: { s1: 'HTML & CSS', s2: 'JavaScript', s3: 'WordPress & PHP', s4: 'Java', s5: 'Figma', s6: 'Suite Adobe', s7: 'SQL', s8: 'IA générative' },
 
     proj: {
       kicker: 'Projets',
-      title: 'travaux sélectionnés',
+      title: 'Travaux sélectionnés',
       viewall: 'Tous les projets',
       lead: 'Une sélection de projets où design, code et curiosité se rencontrent. D\'autres arrivent bientôt.',
       others: 'À venir',
       gallery: 'Aperçus',
     },
     game: {
-      kicker: 'Jeu · projet EPFL',
-      title: 'myserdon',
+      kicker: 'Jeu · projet HEIG-VD',
+      title: 'Myserdon',
       lead: "Un jeu d'aventure textuel, joué dans une console : tape des commandes pour explorer, parler et échanger. Un mini-jeu codé en Java, porté pour le web. (Jeu en anglais.)",
       note: "Tape 'help' pour la liste des commandes. Ex. : talk · move north · take Math_Book · give Travel_Pass · map",
       play: 'Jouer maintenant',
-      tag: 'EPFL · Java',
-      desc: "Jeu d'aventure textuel (RPG) jouable en ligne — explore, parle, échange et échappe-toi de Myserdon.",
+      tag: 'HEIG-VD · ConceptObjet',
+      desc: "Jeu d'aventure textuel (RPG) en Java — réalisé en 1re année à la HEIG-VD (cours ConceptObjet) avec Eva & Kevin. Jouable en ligne.",
     },
     thenox: {
       tag: 'HEIG-VD · 2025',
@@ -62,14 +62,14 @@ export const dict = {
     },
     soon: {
       badge: 'Bientôt',
-      epflTitle: 'epfl — crypto & stégano',
+      epflTitle: 'EPFL — crypto & stégano',
       epflDesc: 'Cryptographie et stéganographie en Java. (Le mini-jeu RPG est jouable dans l\'onglet Jeu.)',
-      hessoTitle: 'hes-so — design & simulation',
+      hessoTitle: 'HES-SO — design & simulation',
       hessoDesc: 'Maquettes de sites web (Figma) et mini-jeu de simulation (NetLogo).',
     },
 
     cv: {
-      title: 'cv',
+      title: 'CV',
       lead: 'Mon parcours, mes compétences et mes certifications — en un coup d\'œil.',
       download: 'Télécharger le PDF',
       formation: 'Formation',
@@ -106,7 +106,7 @@ export const dict = {
     certBISub: 'Board Infinity · Coursera · 2024',
 
     contact: {
-      title: 'contact',
+      title: 'Contact',
       lead: 'Un projet, une opportunité de stage, ou juste envie d\'échanger ? Écris-moi.',
       email: 'Email', phone: 'Téléphone', location: 'Localisation', linkedin: 'LinkedIn',
       locValue: 'Lausanne, Suisse',
@@ -117,7 +117,7 @@ export const dict = {
     form: { name: 'Nom', email: 'Email', message: 'Message', phName: 'Votre nom', phEmail: 'vous@exemple.com', phMsg: 'Bonjour Margarita, …' },
 
     footer: {
-      cta: 'travaillons<br>ensemble',
+      cta: 'Travaillons<br>ensemble',
       tagline: 'Conçu avec soin à Lausanne.',
       rights: '© 2026 Margarita Demakova',
     },
@@ -128,7 +128,7 @@ export const dict = {
 
     hero: {
       kicker: 'Portfolio · Media Engineering',
-      hello: 'hi,<br>i\'m',
+      hello: 'Hi,<br>I\'m',
       role: 'Media engineering student at HEIG-VD. I craft web experiences at the intersection of design and development.',
       ctaProjects: 'View my work',
       ctaContact: 'Get in touch',
@@ -148,27 +148,27 @@ export const dict = {
 
     planet: {
       kicker: 'Skills',
-      title: 'my skills universe',
+      title: 'My skills universe',
       lead: 'My tools orbit one same world: making things, from design to code. The planet spins as you scroll.',
     },
     skills: { s1: 'HTML & CSS', s2: 'JavaScript', s3: 'WordPress & PHP', s4: 'Java', s5: 'Figma', s6: 'Adobe Suite', s7: 'SQL', s8: 'Generative AI' },
 
     proj: {
       kicker: 'Projects',
-      title: 'selected work',
+      title: 'Selected work',
       viewall: 'All projects',
       lead: 'A selection of projects where design, code and curiosity meet. More coming soon.',
       others: 'Coming up',
       gallery: 'Previews',
     },
     game: {
-      kicker: 'Game · EPFL project',
-      title: 'myserdon',
+      kicker: 'Game · HEIG-VD project',
+      title: 'Myserdon',
       lead: 'A text adventure played in a console: type commands to explore, talk and trade. A Java mini-game, ported to the web.',
       note: "Type 'help' for the command list. e.g. talk · move north · take Math_Book · give Travel_Pass · map",
       play: 'Play now',
-      tag: 'EPFL · Java',
-      desc: 'A text-adventure RPG you can play online — explore, talk, trade and escape Myserdon.',
+      tag: 'HEIG-VD · ConceptObjet',
+      desc: 'A text-adventure RPG in Java — built in 1st year at HEIG-VD (ConceptObjet course) with Eva & Kevin. Playable online.',
     },
     thenox: {
       tag: 'HEIG-VD · 2025',
@@ -178,14 +178,14 @@ export const dict = {
     },
     soon: {
       badge: 'Coming soon',
-      epflTitle: 'epfl — crypto & stego',
+      epflTitle: 'EPFL — crypto & stego',
       epflDesc: 'Cryptography and steganography in Java. (The RPG mini-game is playable in the Game tab.)',
-      hessoTitle: 'hes-so — design & simulation',
+      hessoTitle: 'HES-SO — design & simulation',
       hessoDesc: 'Website mockups (Figma) and a simulation mini-game (NetLogo).',
     },
 
     cv: {
-      title: 'resume',
+      title: 'Resume',
       lead: 'My background, skills and certifications — at a glance.',
       download: 'Download PDF',
       formation: 'Education',
@@ -222,7 +222,7 @@ export const dict = {
     certBISub: 'Board Infinity · Coursera · 2024',
 
     contact: {
-      title: 'contact',
+      title: 'Contact',
       lead: 'A project, an internship opportunity, or just a chat? Drop me a line.',
       email: 'Email', phone: 'Phone', location: 'Location', linkedin: 'LinkedIn',
       locValue: 'Lausanne, Switzerland',
@@ -233,7 +233,7 @@ export const dict = {
     form: { name: 'Name', email: 'Email', message: 'Message', phName: 'Your name', phEmail: 'you@example.com', phMsg: 'Hi Margarita, …' },
 
     footer: {
-      cta: 'let\'s work<br>together',
+      cta: 'Let\'s work<br>together',
       tagline: 'Crafted with care in Lausanne.',
       rights: '© 2026 Margarita Demakova',
     },
