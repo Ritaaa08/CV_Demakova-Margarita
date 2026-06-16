@@ -607,6 +607,12 @@ body.fade-out { animation: pageOut 0.4s var(--ease) forwards; }
   .burger { display: block; }
 }
 
+@media (max-width: 760px) {
+  .hero__copy { text-align: center; max-width: 100%; }
+  .hero__copy .kicker, .hero__role { margin-left: auto; margin-right: auto; }
+  .hero__cta { justify-content: center; }
+}
+
 /* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }

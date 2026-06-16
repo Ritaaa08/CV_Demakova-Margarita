@@ -359,7 +359,7 @@ function victory() {
   ov.innerHTML = `
     <div class="game-overlay__card">
       <p class="kicker" style="justify-content:center">Myserdon</p>
-      <h2 class="game-overlay__title">victory!</h2>
+      <h2 class="game-overlay__title">Victory!</h2>
       <p>You gave your Travel_Pass to Rita and caught the train. You’ve escaped Myserdon. 🚂</p>
       <button class="btn btn-primary" id="game-replay" style="justify-content:center;margin-top:10px">Play again</button>
     </div>`;

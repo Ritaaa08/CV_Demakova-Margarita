@@ -67,6 +67,12 @@ export const dict = {
       hessoTitle: 'HES-SO — design & simulation',
       hessoDesc: 'Maquettes de sites web (Figma) et mini-jeu de simulation (NetLogo).',
     },
+    hesso: {
+      tag: 'HES-SO · APFI',
+      title: 'HES-SO — maquettes Figma',
+      desc: 'Maquettes de sites web sur Figma (projet « Astralis »), réalisées pendant l\'année préparatoire APFI à la HES-SO.',
+      view: 'Voir les maquettes',
+    },
 
     cv: {
       title: 'CV',
@@ -182,6 +188,12 @@ export const dict = {
       epflDesc: 'Cryptography and steganography in Java. (The RPG mini-game is playable in the Game tab.)',
       hessoTitle: 'HES-SO — design & simulation',
       hessoDesc: 'Website mockups (Figma) and a simulation mini-game (NetLogo).',
+    },
+    hesso: {
+      tag: 'HES-SO · APFI',
+      title: 'HES-SO — Figma mockups',
+      desc: 'Website mockups in Figma (project “Astralis”), made during the APFI preparatory year at HES-SO.',
+      view: 'View the mockups',
     },
 
     cv: {
