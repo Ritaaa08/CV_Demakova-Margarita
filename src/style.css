@@ -146,7 +146,7 @@ h1, h2, h3, h4 {
 
 .section-head { max-width: 760px; margin-bottom: clamp(40px, 6vw, 72px); }
 .section-head .kicker { margin-bottom: 18px; }
-.section-head h2 { font-size: clamp(2.2rem, 6vw, 4.6rem); font-weight: 900; }
+.section-head h2 { font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 900; }
 
 .eyebrow-num {
   font-family: var(--font-display);
@@ -310,12 +310,12 @@ h1, h2, h3, h4 {
 .hero__hello {
   display: block; font-family: var(--font-display); font-weight: 800;
   letter-spacing: -0.02em; line-height: 0.95;
-  font-size: clamp(1.4rem, 4.4vw, 2.2rem); color: var(--ink-soft); margin-bottom: 8px;
+  font-size: clamp(1rem, 3vw, 1.45rem); color: var(--ink-soft); margin-bottom: 6px;
 }
 .hero__name {
   display: block; font-family: var(--font-display); font-weight: 900;
   text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.9;
-  font-size: clamp(3rem, 11vw, 7.2rem); color: var(--ink);
+  font-size: clamp(2rem, 6.5vw, 3.7rem); color: var(--ink);
 }
 .hero__role {
   font-family: var(--font-body); font-weight: 500;
@@ -386,11 +386,11 @@ h1, h2, h3, h4 {
 .planet-stage { position: relative; width: 100%; height: clamp(360px, 64vw, 620px); }
 .planet-stage::before { /* glow halo behind planet */
   content: ""; position: absolute; inset: 0; z-index: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.22), rgba(255,255,255,0) 38%);
+  background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.16), rgba(255,255,255,0) 28%);
 }
 #planet-canvas { position: relative; z-index: 1; display: block; width: 100%; height: 100%; }
 .planet-copy .kicker { color: var(--violet-deep); }
-.planet-copy h2 { font-size: clamp(2.2rem, 6vw, 4.4rem); font-weight: 900; margin: 16px 0 18px; }
+.planet-copy h2 { font-size: clamp(1.6rem, 4vw, 2.5rem); font-weight: 900; margin: 14px 0 16px; }
 .planet-copy .lead { color: #4a3f63; }
 .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
 .skill-tag { background: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.9); padding: 9px 16px; border-radius: var(--r-pill); font-size: 0.85rem; font-weight: 600; color: var(--ink); box-shadow: var(--shadow-sm); }
@@ -446,7 +446,7 @@ h1, h2, h3, h4 {
 .page-hero { padding-top: calc(var(--nav-h) + clamp(48px, 9vw, 110px)); padding-bottom: clamp(30px, 5vw, 56px); background: var(--grad-sky); position: relative; overflow: hidden; }
 .page-hero::after { content: ""; position: absolute; width: 50vw; height: 50vw; right: -16vw; top: -10vw; border-radius: 50%; background: radial-gradient(circle, rgba(166,179,240,0.5), transparent 65%); filter: blur(50px); }
 .page-hero .wrap { position: relative; z-index: 2; }
-.page-hero h1 { font-size: clamp(2.8rem, 9vw, 6.5rem); font-weight: 900; }
+.page-hero h1 { font-size: clamp(2rem, 6vw, 3.4rem); font-weight: 900; }
 .page-hero .lead { margin-top: 18px; }
 
 .cv-cols { display: grid; grid-template-columns: 1fr; gap: clamp(40px, 6vw, 72px); }
@@ -509,7 +509,7 @@ h1, h2, h3, h4 {
 .footer { background: var(--ink); color: #EDE7F7; padding-block: clamp(54px, 8vw, 90px) 30px; position: relative; overflow: hidden; }
 .footer::before { content: ""; position: absolute; width: 60vw; height: 60vw; left: 50%; top: 30%; transform: translateX(-50%); border-radius: 50%; background: radial-gradient(circle, rgba(139,108,240,0.35), transparent 60%); filter: blur(60px); }
 .footer .wrap { position: relative; z-index: 2; }
-.footer__cta { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.4rem, 8vw, 6rem); line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 36px; }
+.footer__cta { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.8rem, 5vw, 3.2rem); line-height: 0.95; letter-spacing: -0.03em; margin-bottom: 32px; }
 .footer__cta a { background: linear-gradient(120deg, #C9B8F0, #F2A9C4); -webkit-background-clip: text; background-clip: text; color: transparent; transition: opacity 0.3s; }
 .footer__cta a:hover { opacity: 0.8; }
 .footer__row { display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; align-items: center; border-top: 1px solid rgba(255,255,255,0.12); padding-top: 26px; }
@@ -543,7 +543,7 @@ body.fade-out { animation: pageOut 0.4s var(--ease) forwards; }
   visibility: hidden;
 }
 .mnav.open { transform: none; visibility: visible; }
-.mnav a { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.4rem, 11vw, 4rem); line-height: 1.05; color: var(--ink); }
+.mnav a { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.8rem, 8vw, 2.8rem); line-height: 1.1; color: var(--ink); }
 .mnav a.active { background: var(--grad-brand); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .mnav .m-meta { margin-top: 30px; color: var(--ink-soft); font-family: var(--font-body); font-weight: 500; }
 
@@ -578,7 +578,7 @@ body.fade-out { animation: pageOut 0.4s var(--ease) forwards; }
 
 .game-overlay { position: fixed; inset: 0; display: grid; place-items: center; background: rgba(31, 24, 48, 0.6); backdrop-filter: blur(8px); z-index: 1200; padding: 20px; animation: pageIn 0.4s var(--ease) both; }
 .game-overlay__card { background: var(--surface); border-radius: var(--r-lg); padding: clamp(28px, 5vw, 48px); text-align: center; max-width: 440px; box-shadow: var(--shadow-lg); }
-.game-overlay__title { font-family: var(--font-display); font-weight: 900; font-size: clamp(2.4rem, 7vw, 3.6rem); background: var(--grad-brand); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 6px 0 12px; }
+.game-overlay__title { font-family: var(--font-display); font-weight: 900; font-size: clamp(1.8rem, 5vw, 2.6rem); background: var(--grad-brand); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 6px 0 12px; }
 
 /* =========================================================================
    RESPONSIVE

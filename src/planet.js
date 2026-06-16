@@ -32,9 +32,9 @@ system.rotation.z = 0.14;
 floatGroup.add(system);
 
 const TILT_Z = 0.14;
-const ORBIT_R = 2.4;
+const ORBIT_R = 2.2;
 const LOGO_SIZE = 0.78;
-const RING_IN = 2.15, RING_OUT = 2.78;
+const RING_IN = 1.95, RING_OUT = 2.45;
 
 let ring, planet;
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -107,7 +107,7 @@ function resize() {
   renderer.setSize(w, h, false);
   const aspect = w / h;
   camera.aspect = aspect;
-  camera.position.z = aspect < 1 ? CAM_Z * (1 / aspect) * 0.92 : CAM_Z;
+  camera.position.z = aspect < 1 ? CAM_Z * (1 / aspect) * 1.04 : CAM_Z * 1.04;
   camera.updateProjectionMatrix();
 }
 addEventListener('resize', resize);
